@@ -21,9 +21,9 @@ public class CountriesController {
     return "index";
   }
 
-  @RequestMapping("/country/{countryName}")
-  public String findCountryPage(@PathVariable String countryName, Model model){
-    Country country = mCountryRepository.detailCountry(countryName);
+  @RequestMapping("/country/{name}")
+  public String findCountryPage(@PathVariable String name, Model model){
+    Country country = mCountryRepository.detailCountry(name);
 
     model.addAttribute("country", country);
     return "country";
