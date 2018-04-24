@@ -11,12 +11,13 @@ import java.util.List;
 @Repository
 public class CountryRepository {
 
-  private static final List<Country> ALL_COUNTRIES = Arrays.asList(
-      new Country("ecuador", 1230000000, "Quito", Arrays.asList("English", "Spanish")),
+  public static final List<Country> ALL_COUNTRIES = Arrays.asList(
       new Country("france", 194000000, "Paris", Arrays.asList("French")),
+      new Country("ecuador", 1230000000, "Quito", Arrays.asList("English", "Spanish")),
+      new Country("kenya", 117000000, "Nairobi", Arrays.asList("Swahili", "English")),
       new Country("india", 185000000, "Neu-Delhi", Arrays.asList("English", "Hindu")),
-      new Country("italy", 106000000, "Rom", Arrays.asList("Italian")),
-      new Country("kenya", 117000000, "Nairobi", Arrays.asList("Swahili", "English"))
+      new Country("italy", 106000000, "Rom", Arrays.asList("Italian"))
+
   );
 
   public List<Country> sortByName(){

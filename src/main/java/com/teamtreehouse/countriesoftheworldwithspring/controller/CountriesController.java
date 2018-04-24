@@ -17,7 +17,8 @@ public class CountriesController {
   private CountryRepository mCountryRepository;
 
   @RequestMapping("/")
-  public String index() {
+  public String index(Model model) {
+    model.addAttribute("countries", CountryRepository.ALL_COUNTRIES);
     return "index";
   }
 
